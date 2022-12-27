@@ -1,3 +1,3 @@
-export * from './Typograhpy';
-export * from './Image';
-export * from './Anchor';
+export * from "./Typograhpy";
+export * from "./Image";
+export * from "./Anchor";

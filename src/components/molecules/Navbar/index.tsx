@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { IoClose, IoMenu } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
-import { IoMenu, IoClose } from "react-icons/io5";
+
+import { Typograhpy } from "../../atoms";
 
 import { LinksData } from "./LinksData";
 import styles from "./navbar.module.scss";
-import { Typograhpy } from "../../atoms";
 
 export function Navbar() {
   const [isMenuOpen, setIsmenuOpen] = useState(false);
@@ -16,7 +17,9 @@ export function Navbar() {
   return (
     <>
       <div className={styles.navbar}>
-        <Typograhpy variant="h2" className={styles.logo}>Portfolio</Typograhpy>
+        <Typograhpy variant="h2" className={styles.logo}>
+          Portfolio
+        </Typograhpy>
         <div className={styles.desktopitems}>
           {LinksData.map((link) => (
             <NavLink
@@ -26,9 +29,9 @@ export function Navbar() {
               style={({ isActive }) =>
                 isActive
                   ? {
-                    background: "rgb(68 68 68 / 55%)",
-                    borderBottom: "3px solid rgba(40, 40, 40, 0.67",
-                  }
+                      background: "rgb(68 68 68 / 55%)",
+                      borderBottom: "3px solid rgba(40, 40, 40, 0.67",
+                    }
                   : { color: "white" }
               }
             >
@@ -45,7 +48,7 @@ export function Navbar() {
             }
             onClick={handleMobileMenuToggle}
           >
-            <IoMenu size={40} color='#ffffff' />
+            <IoMenu size={40} color="#ffffff" />
           </div>
 
           <div
@@ -56,7 +59,7 @@ export function Navbar() {
             }
             onClick={handleMobileMenuToggle}
           >
-            <IoClose size={40} color='#ffffff' />
+            <IoClose size={40} color="#ffffff" />
           </div>
         </div>
       </div>
@@ -76,9 +79,9 @@ export function Navbar() {
             style={({ isActive }) =>
               isActive
                 ? {
-                  background: "rgb(68 68 68 / 55%)",
-                  borderBottom: "3px solid rgba(40, 40, 40, 0.67",
-                }
+                    background: "rgb(68 68 68 / 55%)",
+                    borderBottom: "3px solid rgba(40, 40, 40, 0.67",
+                  }
                 : { color: "white" }
             }
           >
@@ -88,4 +91,4 @@ export function Navbar() {
       </div>
     </>
   );
-};
+}

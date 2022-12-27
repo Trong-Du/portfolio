@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 
-import { Typograhpy, EducationCard } from "../../components";
-import { pageVariants, pageTransition } from "../../utils/FramerAnimation";
+import { EducationCard, Typograhpy } from "../../components";
 import { ExperienceData } from "../../data/ExperienceData";
+import { pageTransition, pageVariants } from "../../utils/FramerAnimation";
+
 import styles from "./experience.module.scss";
 
 const eduOpen = "<experience>";
@@ -12,14 +13,16 @@ const Experience = () => {
   return (
     <div className={styles.education}>
       <motion.div
-        initial='init'
-        animate='anim'
-        exit='last'
+        initial="init"
+        animate="anim"
+        exit="last"
         variants={pageVariants}
         transition={pageTransition}
       >
         <div className={styles.wrapper}>
-          <Typograhpy variant="h3" className={styles.eduOpen}>{eduOpen}</Typograhpy>
+          <Typograhpy variant="h3" className={styles.eduOpen}>
+            {eduOpen}
+          </Typograhpy>
           <div className={styles.center_line}></div>
           {ExperienceData.map((item, index) => (
             <EducationCard
@@ -34,7 +37,9 @@ const Experience = () => {
               isLeft={index % 2 === 0 ? true : false}
             />
           ))}
-          <Typograhpy variant="h3" className={styles.eduClose}>{eduClose}</Typograhpy>
+          <Typograhpy variant="h3" className={styles.eduClose}>
+            {eduClose}
+          </Typograhpy>
         </div>
       </motion.div>
     </div>

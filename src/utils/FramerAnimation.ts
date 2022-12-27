@@ -1,7 +1,7 @@
 const pageVariants = {
   init: {
     opacity: 0,
-    y: '-100%',
+    y: "-100%",
   },
   anim: {
     opacity: 1,
@@ -9,13 +9,13 @@ const pageVariants = {
   },
   last: {
     opacity: 0,
-    y: '-100%',
+    y: "-100%",
   },
 };
 
 const pageTransition = {
-  type: 'tween',
-  ease: 'anticipate',
+  type: "tween",
+  ease: "anticipate",
   duration: 1,
 };
 
